@@ -21,4 +21,4 @@ function calculateDemeritPoints(speed) {
 }
 
 // example function call
-console.log(calculateDemeritPoints(120)); 
+console.log(calculateDemeritPoints(180)); 

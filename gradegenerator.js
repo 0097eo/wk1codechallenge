@@ -1,11 +1,12 @@
-//prompt user for input and convert the string to a number
-let marks = prompt("Please enter your marks (0-100)")
-marks = Number(marks)
+// importing prompt-sync
+const prompt = require("prompt-sync")({sigint: true});
 
+// Prompt user for input and convert the string to a number
+let marks = prompt("Please enter your marks (0-100): ");
+marks = Number(marks);
 
-// function to check the range of user input and assign and output grade
-
-function getGrade(){
+// Function to check the range of user input and assign and output grade
+function getGrade(marks) {
     let grade;
     if (marks > 79 && marks <= 100) {
         grade = 'A';
@@ -18,13 +19,13 @@ function getGrade(){
     } else if (marks < 40) {
         grade = 'E';
     }
-    alert("Your grade is: " + grade);
-    
+    console.log("Your grade is: " + grade);
 }
-// check if the user entered a valid number
+
+// Check if the user entered a valid number
 if (!isNaN(marks)) {
-    // function call to execute grade assignment
+    // Function call to execute grade assignment
     getGrade(marks);
 } else {
-    alert("Invalid input. Please enter a number.");
+    console.log("Invalid input. Please enter a number.");
 }
